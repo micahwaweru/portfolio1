@@ -10,7 +10,7 @@ export default function CardCont(cardAr) {
 
   const [posts, setPosts] = useState([]);
   useEffect(()=>{
-    fetch('http://localhost:4001/getProjects')
+    fetch('/getProjects')
     .then((response)=>response.json())
     .then((data)=>{
       
