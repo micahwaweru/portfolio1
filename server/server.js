@@ -4,7 +4,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 const app = express();
 
 const cors = require('cors');
@@ -81,5 +81,5 @@ app.post('/newJob',(req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log(`App listening at http://localhost:${PORT}`)
+    console.log(`App listening at ${PORT}`)
 });
